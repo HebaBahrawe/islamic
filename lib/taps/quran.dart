@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../suraDetails.dart';
+import '../suraDetailsArgs.dart';
+
 class Quran extends StatelessWidget {
   //const Quran({Key? key}) : super(key: key);
   List<String> suraName = [
@@ -142,7 +145,11 @@ class Quran extends StatelessWidget {
           child: ListView.separated(
               itemBuilder: (context, index) {
                 return InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, SuraName.rouitNam,
+                        arguments: SuraDetailsArgs(
+                            suraName: suraName[index], index: index));
+                  },
                   child: Center(
                     child: Text(suraName[index],
                         style: Theme.of(context)
