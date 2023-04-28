@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home_screen.dart';
+import 'my_them.dart';
 
 void main() {
   runApp(MyApplication());
@@ -14,6 +15,7 @@ class MyApplication extends StatelessWidget {
         HomeScreen.routName: (context) => HomeScreen(),
       },
       initialRoute: HomeScreen.routName,
+      theme: MyThemData.lightThem,
     );
   }
 }
