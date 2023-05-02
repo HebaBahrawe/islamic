@@ -134,7 +134,7 @@ class Quran extends StatelessWidget {
           indent: 35,
           endIndent: 35,
         ),
-        Text("Sura Name"),
+        Text("Sura Name", style: Theme.of(context).textTheme.bodyLarge),
         Divider(
           color: Theme.of(context).primaryColor,
           thickness: 3,
@@ -151,7 +151,8 @@ class Quran extends StatelessWidget {
                             suraName: suraName[index], index: index));
                   },
                   child: Center(
-                    child: Text(suraName[index],
+                    child: Text(
+                        suraName[index], //الlist الي عملتها فيه أسماء السور
                         style: Theme.of(context)
                             .textTheme
                             .bodyLarge
